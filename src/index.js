@@ -1,3 +1,12 @@
+import React from "react";
+import ReactDom from "react-dom";
+
+const greeting = {
+  morning: "Good morning"
+};
+
+ReactDom.render(<h1>Good morning</h1>, document.getElementById("root"));
+
 //Create a React app from scratch.
 //Show a single h1 that says "Good morning" if between midnight and 12PM.
 //or "Good Afternoon" if between 12PM and 6PM.
