@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-const date = new Date(2021, 5, 5, 8);
+const date = new Date(2021, 5, 5, 19);
 
 const timeSel = {
   word: String
