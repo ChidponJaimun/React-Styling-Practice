@@ -10,24 +10,25 @@ import ReactDOM from "react-dom";
 
 let date = new Date();
 let hr = date.getHours();
+hr = parseInt(hr);
 let display = {
   time: "",
   color: ""
 };
-if (hr >= 12 || hr < 18) {
-  display.time = "Good Afternoob.";
-  display.color = "green";
-} else if (hr >= 18) {
-  display.time = "Good Evening.";
-  display.color = "blue";
-} else {
+if (hr < 12) {
   display.time = "Good Morning.";
   display.color = "red";
+} else if (hr >= 12 && hr < 18) {
+  display.time = "Good Afternoon.";
+  display.color = "green";
+} else {
+  display.time = "Good Evening.";
+  display.color = "blue";
 }
 
 ReactDOM.render(
   <div>
-    <h1>{hr}</h1>
+    <h1>{display.time}</h1>
   </div>,
   document.getElementById("root")
 );
