@@ -10,7 +10,7 @@ import ReactDOM from "react-dom";
 
 let date = new Date();
 let hr = date.getHours();
-hr = parseInt(hr);
+
 let display = {
   time: "",
   color: {}
