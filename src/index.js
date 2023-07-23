@@ -13,22 +13,22 @@ let hr = date.getHours();
 hr = parseInt(hr);
 let display = {
   time: "",
-  color: ""
+  color: {}
 };
 if (hr < 12) {
   display.time = "Good Morning.";
-  display.color = "red";
+  display.color = { color: "red" };
 } else if (hr >= 12 && hr < 18) {
   display.time = "Good Afternoon.";
-  display.color = "green";
+  display.color = { color: "green" };
 } else {
   display.time = "Good Evening.";
-  display.color = "blue";
+  display.color = { color: "blue" };
 }
 
 ReactDOM.render(
   <div>
-    <h1>{display.time}</h1>
+    <h1 style={display.color}>{display.time}</h1>
   </div>,
   document.getElementById("root")
 );
