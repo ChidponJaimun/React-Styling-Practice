@@ -8,10 +8,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+let date = new Date();
+let hr = date.getHours();
+let display = {
+  time: "",
+  color: ""
+};
+if (hr >= 12 || hr < 18) {
+  display.time = "Good Afternoob.";
+  display.color = "green";
+} else if (hr >= 18) {
+  display.time = "Good Evening.";
+  display.color = "blue";
+} else {
+  display.time = "Good Morning.";
+  display.color = "red";
+}
+
 ReactDOM.render(
   <div>
-    <p style={customStyle}>Created by {fName + " " + lName}.</p>
-    <p>Copyright {year}.</p>
+    <h1>{hr}</h1>
   </div>,
   document.getElementById("root")
 );
