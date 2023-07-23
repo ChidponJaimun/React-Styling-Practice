@@ -5,3 +5,13 @@
 //Apply the "heading" style in the styles.css
 //Dynamically change the color of the h1 using inline css styles.
 //Morning = red, Afternoon = green, Night = blue.
+import React from "react";
+import ReactDOM from "react-dom";
+
+ReactDOM.render(
+  <div>
+    <p style={customStyle}>Created by {fName + " " + lName}.</p>
+    <p>Copyright {year}.</p>
+  </div>,
+  document.getElementById("root")
+);
